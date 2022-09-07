@@ -1,0 +1,13 @@
+com.api.gateway
+com.gateway
+com.leader
+com.political.leader.App
+com.political.leader.App.common
+com.political.leader.App.controller
+com.political.leader.App.entity
+com.political.leader.App.repo
+com.political.leader.App.service
+com.political.leader.App.service.impl
+com.political.leader.App.vo
+com.political.party.App
+com.service.registry

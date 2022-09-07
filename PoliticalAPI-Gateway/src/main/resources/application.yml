@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: POLITICALAPI-GATEWAY-SERVICE
+    
+  cloud:
+    gateway:
+      routes:
+        - id: politicalparty-service
+          uri: lb://PoliticalParty-Service
+          predicates:
+           - Path=/politicalparty/**
+           
+        - id: leader-service
+          uri: lb://leader-Service
+          predicates:
+           - Path=/leader/** 
+           
+        - id: developement-service
+          uri: lb://Developement-Service
+          predicates:
+           - Path=/developement/** 
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+  instance:
+    hostname: localhost
+
+server:
+  port: 8181
+           
